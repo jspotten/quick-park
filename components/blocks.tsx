@@ -13,9 +13,13 @@ export default function Blocks() {
         <div className="py-12 md:py-20 border-t border-gray-800">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4">
-              Available Parking
-            </h2>
+            <div className="shrink-0 mr-4 flex-col">
+              {/* Logo */}
+              <img className="rounded-full mt-8 mx-auto" src="/images/testimonial-02.jpg" alt=""></img>
+              <h2 className="h2 mt-2 mb-4 mx-auto">
+                Available Parking
+              </h2>
+            </div>
             <p className="text-xl text-gray-400">
               {/* Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
               officia deserunt mollit anim id est laborum. */}
