@@ -49,7 +49,7 @@ export default function Blocks() {
                   <CardActionArea>
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
-                        Fieldhouse Parking
+                        Fieldhouse &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
                         78 spots available
@@ -83,7 +83,7 @@ export default function Blocks() {
                   <CardActionArea>
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
-                        Duckpond
+                        Duckpond  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
                         3 spots available
@@ -110,14 +110,14 @@ export default function Blocks() {
                 <CardMedia
                   component="img"
                   sx={{ width: 151 }}
-                  image="/images/Lot 33.jpeg"
-                  alt="DuckPond"
+                  image="/images/LOT 7 Marriot Center.jpeg"
+                  alt="Marriot Center"
                 />
                 <Box sx={{ display: "flex", flexDirection: "column" }}>
                   <CardActionArea>
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
-                        Duckpond
+                        Marriot Center
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
                         3 spots available
@@ -126,7 +126,7 @@ export default function Blocks() {
                   </CardActionArea>
                   <CardActions>
                     <Button size="small" color="primary">
-                      Pay
+                      Pay $0.68
                     </Button>
                   </CardActions>
                 </Box>
@@ -144,14 +144,14 @@ export default function Blocks() {
                 <CardMedia
                   component="img"
                   sx={{ width: 151 }}
-                  image="/images/Lot 33.jpeg"
-                  alt="DuckPond"
+                  image="/images/LOT 2 West Stadium.jpeg"
+                  alt="West Stadium"
                 />
                 <Box sx={{ display: "flex", flexDirection: "column" }}>
                   <CardActionArea>
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
-                        Duckpond
+                        West Stadium
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
                         3 spots available
@@ -178,14 +178,14 @@ export default function Blocks() {
                 <CardMedia
                   component="img"
                   sx={{ width: 151 }}
-                  image="/images/Lot 33.jpeg"
-                  alt="DuckPond"
+                  image="/images/LOT 11 Hinckley Center.jpeg"
+                  alt="Hinkley Center"
                 />
                 <Box sx={{ display: "flex", flexDirection: "column" }}>
                   <CardActionArea>
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
-                        Duckpond
+                        Hinckley Center
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
                         3 spots available
@@ -212,14 +212,48 @@ export default function Blocks() {
                 <CardMedia
                   component="img"
                   sx={{ width: 151 }}
-                  image="/images/Lot 33.jpeg"
-                  alt="DuckPond"
+                  image="/images/LOT 3 South East.jpeg"
+                  alt="South East"
                 />
                 <Box sx={{ display: "flex", flexDirection: "column" }}>
                   <CardActionArea>
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
-                        Duckpond
+                        South East Parking
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        3 spots available
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      Pay
+                    </Button>
+                  </CardActions>
+                </Box>
+              </Card>
+            </div>
+
+            {/* 7th item */}
+            <div
+              className="relative flex flex-col items-center"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-anchor="[data-aos-id-blocks]"
+            >
+              <Card sx={{ display: "flex" }}>
+                <CardMedia
+                  component="img"
+                  sx={{ width: 151 }}
+                  image="/images/LOT 8 Broadcast Building.jpeg"
+                  alt="Broadcast Building"
+                />
+                <Box sx={{ display: "flex", flexDirection: "column" }}>
+                  <CardActionArea>
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        Broadcast Building
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
                         3 spots available
@@ -238,5 +272,7 @@ export default function Blocks() {
         </div>
       </div>
     </section>
+
+    
   );
 }
