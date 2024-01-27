@@ -3,5 +3,12 @@
     "short_name": "Day Share",
     "start_url": "/",
     "display": "fullscreen",
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "public/images/QuickPark.png",
+            "sizes": "48x48",
+            "type": "image/webp"
+        }
+    ]
 }
