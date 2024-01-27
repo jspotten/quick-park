@@ -1,0 +1,7 @@
+{
+    "name": "Day Share",
+    "short_name": "Day Share",
+    "start_url": "/",
+    "display": "fullscreen",
+    "orientation": "portrait"
+}
