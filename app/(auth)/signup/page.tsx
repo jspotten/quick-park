@@ -64,8 +64,11 @@ export default function SignUp() {
               <div className="text-sm text-gray-500 text-center">
                 I agree to be contacted by Open PRO about this offer as per the Open PRO <Link href="#" className="underline text-gray-400 hover:text-gray-200 hover:no-underline transition duration-150 ease-in-out">Privacy Policy</Link>.
               </div>
-              <div className="flex flex-wrap -mx-3 mt-6">
-                <div className="w-full px-3">
+              <div className="flex flex-wrap -mx-3 mt-6"></div>
+                <div className="w-full px-3"></div>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   )
