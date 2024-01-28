@@ -18,6 +18,26 @@ export default function Blocks() {
   const fetcher = (url: string) => fetch('/api/sessions').then(r => r.json())
   const { data: ses } = useSWR('/api/sessions', fetcher);
 
+  const lots = [
+    Math.floor(Math.random() * 60),
+    Math.floor(Math.random() * 60),
+    Math.floor(Math.random() * 60),
+    Math.floor(Math.random() * 60),
+    Math.floor(Math.random() * 60),
+    Math.floor(Math.random() * 60),
+    Math.floor(Math.random() * 60),
+  ]
+
+  function pricing(spots: number) {
+    let users = ses ? ses.sessions : 0;
+    console.log(users);
+    const base = 0.8;
+    console.log(base);
+    const ratio = Math.max(users, 1.0)/spots;
+    console.log(ratio);
+    return (base * Math.sqrt(ratio)).toFixed(2);
+  }
+
   useEffect(() => {
     fetch('/api/sessions', {method:'PUT', body: JSON.stringify({id: uuid}), headers: {'Content-Type': 'application/json'}})
     .then((response) => {
@@ -71,13 +91,13 @@ export default function Blocks() {
                         Fieldhouse &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
-                        78 spots available
+                        {lots[0]} spots available
                       </Typography>
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      Pay
+                  <Button size="large" color="success">
+                      Pay ${pricing(lots[0])}
                     </Button>
                   </CardActions>
                 </Box>
@@ -105,13 +125,13 @@ export default function Blocks() {
                         Duckpond  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
-                        3 spots available
+                      {lots[1]} spots available
                       </Typography>
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      Pay
+                  <Button size="large" color="success">
+                      Pay ${pricing(lots[1])}
                     </Button>
                   </CardActions>
                 </Box>
@@ -139,13 +159,13 @@ export default function Blocks() {
                         Marriot Center
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
-                        3 spots available
+                      {lots[2]} spots available
                       </Typography>
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      Pay $0.68
+                  <Button size="large" color="success">
+                      Pay ${pricing(lots[2])}
                     </Button>
                   </CardActions>
                 </Box>
@@ -173,13 +193,13 @@ export default function Blocks() {
                         West Stadium
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
-                        3 spots available
+                      {lots[3]} spots available
                       </Typography>
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      Pay
+                  <Button size="large" color="success">
+                      Pay ${pricing(lots[3])}
                     </Button>
                   </CardActions>
                 </Box>
@@ -207,13 +227,13 @@ export default function Blocks() {
                         Hinckley Center
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
-                        3 spots available
+                      {lots[4]} spots available
                       </Typography>
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      Pay
+                  <Button size="large" color="success">
+                      Pay ${pricing(lots[4])}
                     </Button>
                   </CardActions>
                 </Box>
@@ -241,13 +261,13 @@ export default function Blocks() {
                         South East Parking
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
-                        3 spots available
+                      {lots[5]} spots available
                       </Typography>
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      Pay
+                  <Button size="large" color="success">
+                      Pay ${pricing(lots[5])}
                     </Button>
                   </CardActions>
                 </Box>
@@ -275,13 +295,13 @@ export default function Blocks() {
                         Broadcast Building
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
-                        3 spots available
+                      {lots[6]} spots available
                       </Typography>
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      Pay
+                    <Button size="large" color="success">
+                      Pay ${pricing(lots[6])}
                     </Button>
                   </CardActions>
                 </Box>
