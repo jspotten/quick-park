@@ -1,21 +1,23 @@
-export const metadata = {
-title: 'Home - Quick Park',
-  description: 'Welcome!',
-}
+'use client'
 
-import Hero from '@/components/hero'
-import Cards from '@/components/card'
 import Blocks from '@/components/blocks'
-import Features from '@/components/features'
-import Newsletter from '@/components/newsletter'
-import Zigzag from '@/components/zigzag'
-import Testimonials from '@/components/testimonials'
-
+import Confirm from '@/components/confirm'
+import { Dispatch, useState, SetStateAction } from 'react';
 
 export default function Home() {
+  const [showModal, setShowModal] = useState(false);
+
+  const goConfirm = () => {
+    setShowModal(true);
+  }
+
+  const goBack = () => {
+    setShowModal(false);
+  }
+
   return (
     <>
-      <Blocks />
+      {(showModal) ? <Confirm goBack={goBack}/> : <Blocks goConfirm={goConfirm}/>}
     </>
   )
 }

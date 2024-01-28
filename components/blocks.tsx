@@ -8,10 +8,10 @@ import Box from "@mui/material/Box";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
+import { Button, CardActionArea, CardActions, Link } from "@mui/material";
 import useSWR from 'swr';
 
-export default function Blocks() {
+export default function Blocks(props: any) {
   const uuid = uuidv4();
   const [sessions, setSessions] = useState(0);
 
@@ -19,13 +19,13 @@ export default function Blocks() {
   const { data: ses } = useSWR('/api/sessions', fetcher);
 
   const lots = [
-    Math.floor(Math.random() * 60),
-    Math.floor(Math.random() * 60),
-    Math.floor(Math.random() * 60),
-    Math.floor(Math.random() * 60),
-    Math.floor(Math.random() * 60),
-    Math.floor(Math.random() * 60),
-    Math.floor(Math.random() * 60),
+    Math.ceil(Math.random() * 60),
+    Math.ceil(Math.random() * 60),
+    Math.ceil(Math.random() * 60),
+    Math.ceil(Math.random() * 60),
+    Math.ceil(Math.random() * 60),
+    Math.ceil(Math.random() * 60),
+    Math.ceil(Math.random() * 60),
   ]
 
   function pricing(spots: number) {
@@ -96,7 +96,7 @@ export default function Blocks() {
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                  <Button size="large" color="success">
+                  <Button size="large" color="success" onClick={props.goConfirm}>
                       Pay ${pricing(lots[0])}
                     </Button>
                   </CardActions>
@@ -130,7 +130,7 @@ export default function Blocks() {
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                  <Button size="large" color="success">
+                  <Button size="large" color="success" onClick={props.goConfirm}>
                       Pay ${pricing(lots[1])}
                     </Button>
                   </CardActions>
@@ -164,7 +164,7 @@ export default function Blocks() {
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                  <Button size="large" color="success">
+                  <Button size="large" color="success" onClick={props.goConfirm}>
                       Pay ${pricing(lots[2])}
                     </Button>
                   </CardActions>
@@ -198,7 +198,7 @@ export default function Blocks() {
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                  <Button size="large" color="success">
+                  <Button size="large" color="success" onClick={props.goConfirm}>
                       Pay ${pricing(lots[3])}
                     </Button>
                   </CardActions>
@@ -232,7 +232,7 @@ export default function Blocks() {
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                  <Button size="large" color="success">
+                  <Button size="large" color="success" onClick={props.goConfirm}>
                       Pay ${pricing(lots[4])}
                     </Button>
                   </CardActions>
@@ -266,7 +266,7 @@ export default function Blocks() {
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                  <Button size="large" color="success">
+                  <Button size="large" color="success" onClick={props.goConfirm}>
                       Pay ${pricing(lots[5])}
                     </Button>
                   </CardActions>
@@ -300,7 +300,7 @@ export default function Blocks() {
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                    <Button size="large" color="success">
+                    <Button size="large" color="success" onClick={props.goConfirm}>
                       Pay ${pricing(lots[6])}
                     </Button>
                   </CardActions>
