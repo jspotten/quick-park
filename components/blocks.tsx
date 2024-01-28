@@ -1,12 +1,30 @@
+'use client'
+
+import { v4 as uuidv4 } from 'uuid';
 import * as React from "react";
+import { useState, useEffect } from "react";
 import Card from "@mui/material/Card";
 import Box from "@mui/material/Box";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
+import useSWR from 'swr';
 
 export default function Blocks() {
+  const uuid = uuidv4();
+  const [sessions, setSessions] = useState(0);
+
+  const fetcher = (url: string) => fetch('/api/sessions').then(r => r.json())
+  const { data: ses } = useSWR('/api/sessions', fetcher);
+
+  useEffect(() => {
+    fetch('/api/sessions', {method:'PUT', body: JSON.stringify({id: uuid}), headers: {'Content-Type': 'application/json'}})
+    .then((response) => {
+      return response.json();
+    })
+  }, [])
+
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -14,7 +32,7 @@ export default function Blocks() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <h2 className="h2 mb-4">
-              Available Parking
+              Available Parking: {ses ? ses.sessions : '?'} other users
             </h2>
             <p className="text-xl text-gray-400">
               {/* Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
