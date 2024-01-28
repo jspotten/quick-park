@@ -6,9 +6,9 @@
     "orientation": "portrait",
     "icons": [
         {
-            "src": "/public/images/QuickPark.ico",
-            "sizes": "48x48",
-            "type": "image/x-icon"
+            "src": "public/images/QuickPark.png",
+            "sizes": "64x64",
+            "type": "image/png"
         }
     ]
 }

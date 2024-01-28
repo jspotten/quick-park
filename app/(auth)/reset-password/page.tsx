@@ -28,7 +28,7 @@ export default function ResetPassword() {
               </div>
               <div className="flex flex-wrap -mx-3 mt-6">
                 <div className="w-full px-3">
-                  <button className="btn text-white bg-purple-600 hover:bg-purple-700 w-full">Reset Password</button>
+                  <a href="/signin" className="btn text-white bg-purple-600 hover:bg-purple-700 w-full">Reset Password</a>
                 </div>
               </div>
             </form>
