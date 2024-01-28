@@ -13,7 +13,7 @@ export default function SignIn() {
 
           {/* Page header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h1 className="h1">Welcome back. We exist to make entrepreneurship easier.</h1>
+            <h1 className="h1">Welcome back. Just park it.</h1>
           </div>
 
           {/* Form */}

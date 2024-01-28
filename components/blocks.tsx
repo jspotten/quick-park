@@ -156,7 +156,7 @@ export default function Blocks(props: any) {
                   <CardActionArea>
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
-                        Marriot Center
+                        Marriot Center  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
                       {lots[2]} spots available
@@ -190,7 +190,7 @@ export default function Blocks(props: any) {
                   <CardActionArea>
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
-                        West Stadium
+                        West Stadium  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
                       {lots[3]} spots available
@@ -224,7 +224,7 @@ export default function Blocks(props: any) {
                   <CardActionArea>
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
-                        Hinckley Center
+                        Hinckley Center  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
                       {lots[4]} spots available

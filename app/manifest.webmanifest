@@ -1,6 +1,6 @@
 {
-    "name": "Day Share",
-    "short_name": "Day Share",
+    "name": "Quick Park",
+    "short_name": "Quick Park",
     "start_url": "/signin",
     "display": "fullscreen",
     "orientation": "portrait",
